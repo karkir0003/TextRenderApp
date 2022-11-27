@@ -1,11 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import ShowTextButton from '../output-render/ShowTextButton';
+import { StyleSheet, View, TextInput } from 'react-native';
 
 export default function UserInput() {
+  const [text, setText] = React.useState("")
+  
   return (
     <View>
-      <Text style={styles.text}>Hello World! Welcome to React Native</Text>
-      {/* <StatusBar style="auto" /> */}
+      <TextInput 
+        style={styles.input} 
+        onChangeText={setText}
+        placeholder={"Enter Text Here"}
+        keyboardType={"Letter"}
+      />
+      <ShowTextButton text={text} shouldShow={false}/>
     </View>
   );
 }
@@ -18,11 +26,18 @@ const styles = StyleSheet.create({
     fontWeight: 300,
     backgroundColor: '#ffff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   text: {
-    textAlignVertical: "center",
+    textAlignVertical: "top",
     fontFamily: "Roboto",
-    fontWeight: "300"
+    fontWeight: "300",
+  },
+  input: {
+    height: 40,
+    width: 200,
+    margin: 22,
+    borderWidth: 1,
+    padding: 10,
   }
 });

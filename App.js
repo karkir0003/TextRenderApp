@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import UserInput from './components/main-app-screen/user-input/UserInput';
+import Title from './components/main-app-screen/title-banner/Title';
+import {React} from 'react';
+
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
+      <Title/>
       <UserInput/>
-      {/* <Text>Hello World! Welcome to React Native</Text> */}
       <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "#00BCD4" />
     </View>
   );
@@ -17,6 +21,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    // width: getScreenWidth(),
+    // height: getScreenHeight()
   },
 });
