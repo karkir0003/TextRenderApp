@@ -12,7 +12,8 @@ export default function OutputRender(props) {
 const styles = StyleSheet.create({
     text: {
         textAlignVertical: "top",
-        fontFamily: "Roboto",
+        fontFamily: 'monospace',
+        fontSize: 20,
         fontWeight: "300",
     },
 })

@@ -13,7 +13,7 @@ export default function ShowTextButton(props) {
         <View>
             <Button title='Show Text Button' color="green" onPress={() => onClick()}/>
             <View style={styles.space} />
-            <Button title="Clear" color="green" onPress={() => onClear()}/>
+            <Button title="Clear" color="gray" onPress={() => onClear()}/>
             {showOutput ?
             (
             <OutputRender data={props.text}/>
